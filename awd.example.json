@@ -1,0 +1,22 @@
+{
+  "state_dir": ".awd",
+  "targets": [
+    {"name": "own-web", "host": "127.0.0.1", "port": 8080, "protocol": "http", "path": "/", "expected_status": [200], "contains": ""},
+    {"name": "own-pwn", "host": "127.0.0.1", "port": 9999, "protocol": "tcp"}
+  ],
+  "timeout": 3,
+  "workers": 8,
+  "flag_regex": "flag\\{[A-Za-z0-9_:-]{8,200}\\}",
+  "submission": {
+    "url": "",
+    "token_env": "AWD_TOKEN",
+    "auth_header": "Authorization",
+    "auth_prefix": "Bearer ",
+    "flag_field": "flag",
+    "extra_fields": {},
+    "success_status": [200],
+    "success_json_field": "success",
+    "success_json_value": true,
+    "interval_seconds": 1
+  }
+}
